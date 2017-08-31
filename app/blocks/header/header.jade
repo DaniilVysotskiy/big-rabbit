@@ -1,0 +1,53 @@
+include ../logo/logo
+
+mixin header()
+	+b.header&attributes(attributes)
+		.header__bg
+		.container
+			.header--wrapper
+				+logo
+				.header__menu
+					a.grey-link(href="/wheretobuy.html") Где купить мясо кролика?
+					a.phone-link(href="tel: 8 (800) 707-59-00") 8 (800) 707-59-00
+					.icons_group
+						a.icon-help(href="#request")
+						a.icon-phone(href="/contacts.html")
+						a.icon-search(href="/search.html")
+					nav.nav
+						ul.nav__list
+							li.nav__item
+								a.nav__link(href="/") Главная
+							li.nav__item.hasDropdown
+								a.nav__link(href="/about.html") О ферме
+								ul.dropdown
+									.dropdown--wrapper
+										li.dropdown__item
+											a.dropdown__link(href="#0") Производство
+										li.dropdown__item
+											a.dropdown__link(href="#0") Фотогалерея
+										li.dropdown__item
+											a.dropdown__link(href="#0") Сертификаты
+							li.nav__item.hasDropdown
+								a.nav__link(href="/products.html") Мясо кролика
+								ul.dropdown
+									.dropdown--wrapper
+										li.dropdown__item
+											a.dropdown__link(href="#0") Продукция
+										li.dropdown__item
+											a.dropdown__link(href="#0") Где купить мясо кролика
+										li.dropdown__item
+											a.dropdown__link(href="#0") О пользе мяса кролика
+										li.dropdown__item
+											a.dropdown__link(href="#0") Рецепты
+							li.nav__item.hasDropdown
+								a.nav__link(href="/breed.html") Племенное поголовье
+								ul.dropdown
+									.dropdown--wrapper
+										li.dropdown__item
+											a.dropdown__link(href="#0") Порода Хиплюс
+										li.dropdown__item
+											a.dropdown__link(href="#0") Порода Калифорнийская
+										li.dropdown__item
+											a.dropdown__link(href="#0") Порода Советская шиншила
+							li.nav__item
+								a.nav__link.active(href="/contacts.html") Контакты

@@ -1,0 +1,8 @@
+mixin breadcrumbs(items)
+	+b.breadcrumbs&attributes(attributes)
+		block breadcrumbs
+			.container
+				ul.breadcrumbs__list
+					each val in items
+						li.breadcrumbs__item
+							a.breadcrumbs__link(href="#0")= val

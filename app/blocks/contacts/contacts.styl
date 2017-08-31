@@ -1,0 +1,47 @@
+.contacts
+	display block
+	&__group
+		display: flex
+		flex-direction: column
+		position: relative
+		padding-left: 50px
+		font-size: 18px
+		line-height: 1.5
+		&:not(:first-child)
+			margin-top: 1em
+		& a
+			color: black_brand
+			text-decoration: none
+			&:hover
+				text-decoration: underline
+		&.phone
+		&.address
+		&.email
+		&.site
+			&::before
+				font-family: FontAwesome
+				position: absolute
+				font-size: 35px
+				color: green_brand_light
+				left: 0
+				top: 0
+				line-height: 1.2
+		&.phone::before
+			content: '\f095'
+		&.address::before
+			content: '\f041'
+		&.email::before
+			content: '\f0e0'
+			font-size: 25px
+		&.site::before
+			content: '\f0ac'
+			font-size: 30px
+	&__map
+		width: 100%
+		height: 800px
+		background-image: url('/assets/images/contacts_map.jpg')
+		background-size: cover
+
+@media (max-width: 740px)
+	.contacts__map
+		height: calc(100vh - 100px)

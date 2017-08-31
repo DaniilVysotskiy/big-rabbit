@@ -1,0 +1,19 @@
+.section
+	display flex
+	&--double
+		display flex
+		flex-flow: row wrap
+	&--left
+	&--right
+		flex: 1 1 50%
+		margin-bottom: 50px
+	&--right
+		padding-left: 50px
+	&--map
+		margin-bottom: 0
+
+@media (max-width: 800px)
+	.section--double
+		flex-flow: column nowrap
+	.section--right
+		padding-left: 0

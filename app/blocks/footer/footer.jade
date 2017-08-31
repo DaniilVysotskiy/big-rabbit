@@ -1,0 +1,40 @@
+include ../logo/logo
+
+mixin footer()
+	+b.footer&attributes(attributes)
+		.container
+			.footer--wrapper
+				.footer__top
+					nav.footer__nav.nav
+						.nav__group
+							a.nav__link(href="/") Главная
+							a.nav__link(href="/about.html") О ферме
+							ul.nav__sub
+								li.nav__subitem
+									a.nav__sublink(href="/photo.html") Фотогалерея
+								li.nav__subitem
+									a.nav__sublink(href="/certificates.html") Сертификаты
+						.nav__group
+							a.nav__link(href="/products.html") Мясо кролика
+							ul.nav__sub
+								li.nav__subitem
+									a.nav__sublink(href="/wheretobuy.html") Где купить кролика?
+								li.nav__subitem
+									a.nav__sublink(href="/pros.html") О пользе кролика
+								li.nav__subitem
+									a.nav__sublink(href="/reciepts.html") Рецепты
+						.nav__group
+							a.nav__link(href="/breed.html") Племенное поголовье
+							ul.nav__sub
+								li.nav__subitem
+									a.nav__sublink(href="/breed.html#hyplus") Порода Хиплюс
+								li.nav__subitem
+									a.nav__sublink(href="/breed.html#califonia") Порода Калифорнийская
+								li.nav__subitem
+									a.nav__sublink(href="/breed.html#shinshila") Порода Советская шиншила
+						.nav__group
+							a.nav__link(href="/contacts.html") Контакты
+							a.nav__link(href="/search.html") Поиск
+				.footer__bottom
+					+logo
+					a(href="copyright.html").copyright Юхнов-Крол © 2017

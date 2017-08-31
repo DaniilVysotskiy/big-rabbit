@@ -1,0 +1,39 @@
+extends /blocks/layout-default/layout-default
+include ../blocks/breadcrumbs/breadcrumbs
+include ../blocks/section/section
+include ../blocks/feedback/feedback
+include ../blocks/scripts/scripts
+
+block head
+	- var pageTitle = 'Контакты | Юхнов-Крол';
+
+block content
+	+breadcrumbs(['Главная', 'Контакты'])
+	+section
+		.container
+			.section--double
+				.section--left.contacts
+					h2.title Контакты
+					p «Юхнов-Крол» — современное высокотехнологичное предприятие по производству мяса кролика, расположенное в городе Юхнов Калужской области всего в 200 км от Москвы, и специализирующееся на промышленном разведении бройлерных кроликов мясных пород.
+					.contacts--wrapper
+						.contacts__group.phone
+							strong Телефон:
+							a(href="tel:8 (800) 707-59-00") 8 (800) 707-59-00
+							a(href="tel:+7 (985) 970-40-98") +7 (985) 970-40-98
+							a(href="tel:+7 (926) 539-37-69") +7 (926) 539-37-69
+						.contacts__group.address
+							strong Адрес:
+							span Калужская обл, г. Юхнов,<br>Промышленный проезд, вл.7
+						.contacts__group.email
+							strong E-mail:
+							a(href="mailto:info@big-rabbit.ru") info@big-rabbit.ru
+						.contacts__group.site
+							strong Сайт:
+							a(href="/") big-rabbit.ru
+						.contacts__group
+							a.print(href="#0") Печать
+				.section--right
+					h2.title Обратная связь
+					+feedback
+	+section.section--map
+		#contactsYmap.contacts__map

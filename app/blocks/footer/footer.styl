@@ -1,0 +1,77 @@
+.footer
+	display block
+	background-color grey_brand
+	min-height 300px
+	margin-top auto
+	padding-y 20px
+	&--wrapper
+		flex: 1 1 auto
+		display: flex
+		flex-direction: column
+		width: 100%
+	&__top
+		width: 100%
+	&__nav
+		display flex
+		flex-flow: row wrap
+		justify-content space-between
+	.nav
+		margin-x: -20px
+		&__group
+			display: flex
+			flex-direction: column
+			margin: 15px 20px
+		&__link
+			color: white
+			text-transform: uppercase
+			text-decoration: none
+			font-weight: bold
+			white-space: nowrap
+			&:hover
+			&.active
+				text-decoration: underline
+			&:not(:first-child)
+				margin-top: 15px
+		&__sub
+			list-style: square inside
+			color: white
+		&__subitem
+				margin-top: 10px
+		&__sublink
+			color: white
+			text-decoration: none
+			white-space: nowrap
+			&:hover
+			&.active
+				text-decoration: underline
+	&__bottom
+		display flex
+		flex-flow: row wrap
+		justify-content space-between
+		align-items: flex-end
+		margin-x: -20px
+		& .logo
+			margin: 20px
+		& .copyright
+			color: white
+			text-decoration: none
+			white-space: nowrap
+			margin: 20px
+			text-align: right
+			&:hover
+			&.active
+				text-decoration: underline
+
+@media (max-width 600px)
+	.footer .footer__nav
+	.footer .footer__bottom
+		flex-direction: column
+		width: 100%
+		margin-x: 0
+	.footer .nav__group
+		margin-x: 0
+		width: 100%
+	.footer__bottom
+		align-items: stretch
+	.footer__bottom .logo
+		margin: 10px 0
