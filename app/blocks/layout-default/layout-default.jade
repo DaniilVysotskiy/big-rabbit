@@ -9,7 +9,8 @@ doctype html
 html(lang='ru')
 	include ../head/head
 	+page
-		+header
+		block header
+			+header
 		block content
 		+footer
 		+scripts(['app.min.js'])

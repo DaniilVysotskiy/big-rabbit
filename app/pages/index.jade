@@ -1,6 +1,163 @@
 extends /blocks/layout-default/layout-default
 
+include ../blocks/feedback/feedback
+
 block head
 	- var pageTitle = 'Мясо кроликов в Калужской области | Юхнов-Крол';
-
+block header
+	+header.hero
 block content
+	.section.section--hero
+		.section--hero--bg
+		.container
+			.section--hero--moto
+				img.hero__rabbit(src="/assets/images/header_rabbit.png", alt="Кролик французской породы Hyplus")
+				.moto
+					span Юхновский кролик –
+					span премиум качество с европейским уровнем производства
+	.section.section--default.section--aboutUs
+		.container
+			.aboutUs--wrapper
+				.aboutUs__img
+					img(src="/assets/images/main/about_us.jpg", alt="Ферма Юхнов-Крол")
+				.aboutUs__text
+					h2.title О нас
+					p «Юхнов-Крол» – первый в Калужской области высокотехнологичный завод по производству мяса кролика. Основные направления нашей работы – промышленное разведение кроликов европейских бройлерных пород, а также производство и продажа свежего кроличьего мяса премиум-качества.
+					p В разведении участвуют 1000 кроликоматок мясной породы Хиплус, производительное родительское стадо закуплено во Франции.
+					p На производстве используются высокие европейские технологии и итальянское оборудование компании Meneghin – мирового лидера в сфере производства техники для промышленного кролиководства.
+	.section.section--pattern.section--pt50px
+		.container
+			h2.title Технологии
+			.section--double.tech
+				.section--left
+					ul.numList
+						li.numList__item
+							span.numList__title Разведение кроликов
+							p.numList__text в специально оборудованных помещениях с функцией поддержания микроклимата
+						li.numList__item
+							span.numList__title Автоматизированные системы
+							p.numList__text кормления, поенияи навозоудаления
+						li.numList__item
+							span.numList__title Собственное обеспечение кормами
+							p.numList__text в распоряжении кроличьей фермы «Юхнов-Крол» имеются 120 га земли дфля выращивания и заготовки кормов, а также вся необходимая сельскохозяйственная техника
+						li.numList__item
+							span.numList__title Единственный в Калужской области
+							p.numList__text сертифицированный убойный пункт мощностью 500 голов в смену
+				.section--right
+					.photo--techWrapper
+						.photo__item
+							img(src="/assets/images/main/tech1.jpg", alt="Микроклимат")
+						.photo__item
+							img(src="/assets/images/main/tech2.jpg", alt="Автоматизированные системы")
+						.photo__item
+							img(src="/assets/images/main/tech3.jpg", alt="Собственные корма")
+						.photo__item
+							img(src="/assets/images/main/tech4.jpg", alt="Убойный цех")
+	.section.section--default
+		.container
+			.product--wrapper
+				.product__item
+					a.product__name(href="#0") Филе кролика
+					img(src="/assets/images/main/product1.jpg", alt="Филе кролика")
+				.product__item
+					a.product__name(href="#0") Тушка кролика
+					img(src="/assets/images/main/product2.jpg", alt="Тушка кролика")
+				.product__item
+					a.product__name(href="#0") Печень кролика
+					img(src="/assets/images/main/product3.jpg", alt="Печень кролика")
+				.product__item
+					a.product__name(href="#0") Филе кролика
+					img(src="/assets/images/main/product4.jpg", alt="Филе кролика")
+				.product__item
+					a.product__name(href="#0") Голень кролика
+					img(src="/assets/images/main/product5.jpg", alt="Голень кролика")
+				.product__item
+					a.product__name(href="#0") Спинка кролика
+					img(src="/assets/images/main/product6.jpg", alt="Спинка кролика")
+				.product__item
+					a.product__name(href="#0") Спинка кролика
+					img(src="/assets/images/main/product6.jpg", alt="Спинка кролика")
+				.product__item
+					a.more-link(href="/products.html") Еще
+	.section.section--profit.section--default
+		.container
+			h2.title.title--white Кому выгодно покупать у нас?
+			.profit--wrapper
+				.profit__item
+					img.profit__icon(src="/assets/images/main/company_icon.png", alt="Торговые компании")
+					span.profit__text Торговым<br>компаниям
+				.profit__item
+					img.profit__icon(src="/assets/images/main/shop_icon.png", alt="Магазины")
+					span.profit__text Магазинам
+				.profit__item
+					img.profit__icon(src="/assets/images/main/market_icon.png", alt="Рынки")
+					span.profit__text Рынкам
+				.profit__item
+					img.profit__icon(src="/assets/images/main/farm_icon.png", alt="Заводчики и фермеры")
+					span.profit__text Фермерам
+	.section.section--pt50px
+		.container
+			h2.title Факты
+			.facts--wrapper
+				.facts--left
+					.facts__item
+						.facts__icon.ham
+						span.facts__number 60%
+						span.facts__text Выход мяса породы Хиплус
+					.facts__item
+						.facts__icon.rabbit
+						span.facts__number 500
+						span.facts__text Голов – убойность цеха в смену
+					.facts__item
+						.facts__icon.wheat
+						span.facts__number 40
+						span.facts__text Тонн кормов ежемесячно
+					.facts__item
+						.facts__icon.fields
+						span.facts__number 120
+						span.facts__text Гектар собственных земель для выращивания корма
+				.facts--right
+					img(src="/assets/images/main/facts_img.jpg", alt="Мясо кролика")
+	.section.section--pattern.section--default
+		.container
+			h2.title Фотогалерея
+			.photo--gallery
+				a.photo__item(href="#0")
+					img(src="/assets/images/main/photo1.jpg", alt="")
+				a.photo__item(href="#0")
+					img(src="/assets/images/main/photo2.jpg", alt="")
+				a.photo__item(href="#0")
+					img(src="/assets/images/main/photo3.jpg", alt="")
+				a.photo__item(href="#0")
+					img(src="/assets/images/main/photo4.jpg", alt="")
+				a.photo__item(href="#0")
+					img(src="/assets/images/main/photo5.jpg", alt="")
+				a.photo__item(href="#0")
+					img(src="/assets/images/main/photo6.jpg", alt="")
+				a.photo__item(href="#0")
+					img(src="/assets/images/main/photo7.jpg", alt="")
+				.photo__item
+					a.more-link(href="/products.html") Еще
+	.section.section--default
+		.container
+			h2.title Кролики
+			.breed--wrapper
+				a.breed__item(href="#0")
+					.breed__img
+						.breed__bg
+						img.california(src="/assets/images/main/california_breed.png", alt="Калифорнийский кролик")
+					.breed__text Калифорнийский<br>кролик
+				a.breed__item(href="#0")
+					.breed__img
+						.breed__bg
+						img.shinshila(src="/assets/images/main/shinshila_breed.png", alt="Советская шиншила")
+					.breed__text Советская<br>шиншила
+				a.breed__item(href="#0")
+					.breed__img
+						.breed__bg
+						img.hyplus(src="/assets/images/main/hyplus_breed.png", alt="Французский Хиплюс")
+					.breed__text Французский<br>Хиплюс
+	.section.section--map
+		#ymap.contacts__map
+		.container.absolute
+			+feedback.mainPage

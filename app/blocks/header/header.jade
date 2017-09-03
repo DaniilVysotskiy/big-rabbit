@@ -15,7 +15,7 @@ mixin header()
 						a.icon-search(href="/search.html")
 					nav.nav
 						ul.nav__list
-							li.nav__item
+							li.nav__item.active
 								a.nav__link(href="/") Главная
 							li.nav__item.hasDropdown
 								a.nav__link(href="/about.html") О ферме
@@ -50,4 +50,4 @@ mixin header()
 										li.dropdown__item
 											a.dropdown__link(href="#0") Порода Советская шиншила
 							li.nav__item
-								a.nav__link.active(href="/contacts.html") Контакты
+								a.nav__link(href="/contacts.html") Контакты

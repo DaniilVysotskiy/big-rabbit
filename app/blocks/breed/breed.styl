@@ -1,0 +1,61 @@
+.breed
+	display block
+	&--wrapper
+		display: flex
+		flex-flow: row wrap
+		justify-content space-around
+		margin: -45px
+	&__item
+		display: flex
+		flex-direction: column
+		width: calc(33.33% - 90px)
+		min-width: 278px
+		margin: 45px
+		align-items: center
+		text-decoration: none
+		&:hover
+			& .breed__bg
+				filter: brightness(100%)
+	&__img
+		position: relative
+		width: 278px
+		height: 278px
+		margin-bottom: 1em
+		border-radius: 50%
+		& img
+			position: absolute
+			top: 0
+			left: 0
+			&.california
+				top: -14px
+				left: -13px
+			&.shinshila
+				top: -5px
+				left: 1px
+			&.hyplus
+				top: -16px
+				left: 19px
+				filter: brightness(1.1) contrast(.9)
+	&__bg
+		display: block
+		width: 100%
+		height: 100%
+		border-radius: 50%
+		border: 3px solid grey_brand
+		background-image url('/assets/images/main/breed_bg.jpg')
+		background-size: cover
+		filter: brightness(.7)
+	&__text
+		padding-left: 20px
+		border-left: 3px solid green_brand_light
+		font-size: 20px
+		font-weight: 700
+		line-height: 30px
+		color: grey_brand
+
+@media (max-width: 800px)
+	.breed--wrapper
+		margin: 0
+	.breed__item
+		transform: scale(.9)
+		margin: 25px 0
