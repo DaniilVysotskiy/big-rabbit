@@ -1,0 +1,59 @@
+.product
+	display block
+	&--wrapper
+		display: flex
+		flex-flow: row wrap
+		justify-content space-around
+		align-items: stretch
+		margin: -15px
+	&__item
+		position: relative
+		width: calc(25% - 30px)
+		min-width: 270px
+		min-height: 270px
+		flex-basis: 270px
+		background-color: green_brand_light
+		margin: 15px
+		overflow hidden
+		& img
+			height: 100%
+	&__name
+		display: flex
+		align-items: center
+		justify-content center
+		position: absolute
+		width: 100%
+		height: 90px
+		top: 50%
+		transform: translate(0, -50%)
+		font-size: 22px
+		font-weight: 500
+		white-space: nowrap
+		color: black_brand
+		text-decoration: none
+		&::before
+			content: ''
+			display: block
+			width: 100%
+			height: 100%
+			position: absolute
+			background-color: rgba(255, 255, 255, .5)
+			z-index: -2
+		&::after
+			content: ''
+			display: block
+			width: 31px
+			height: 7px
+			background-color: green_brand_light
+			position: absolute
+			left: 0
+			top: calc(50% - 3px)
+			z-index: -1
+		&:hover
+			height: 100%
+@media (max-width: 800px)
+	// .product--wrapper
+	// 	justify-content space-around
+	// 	margin: -10px
+	// .product__item
+	// 	margin: 15px -10px

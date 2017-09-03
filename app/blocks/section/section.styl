@@ -1,8 +1,21 @@
 .section
 	display flex
+	&--default
+		padding-y: 50px
+	&--pattern
+		background-image: url('/assets/images/patterns/cream_dust.png')
+	&--profit
+		background-image: url('/assets/images/main/profit_bg.jpg')
+	&--pt50px
+		padding-top: 50px
 	&--double
 		display flex
 		flex-flow: row wrap
+		&.tech
+			& .section--left
+				padding-right: 2em
+			& .section--right
+				padding-left: 0
 	&--left
 	&--right
 		flex: 1 1 50%
@@ -11,9 +24,88 @@
 		padding-left: 50px
 	&--map
 		margin-bottom: 0
+	&--hero
+		height: 700px
+		position: relative
+		&--bg
+			display: block
+			position: absolute
+			width: 100%
+			height: 100%
+			background-image: url('/assets/images/header_bg.jpg')
+			background-size: cover
+			background-position: 100% 45%
+			filter: brightness(.8) saturate(1.5)
+			z-index: -1
+		&--moto
+			flex: 1 1 auto
+			display: flex
+			position relative
+			align-items: flex-end
+			padding-top: 250px
+			justify-content flex-end
+			& .hero__rabbit
+				position: absolute
+				left: 0
+			& .moto
+				align-self: flex-start
+				display flex
+				flex-direction: column
+				max-width: 570px
+				z-index: 1
+				& span:first-child
+					font-size: 46px
+					font-weight: 500
+					color: white
+					text-transform: uppercase
+					letter-spacing: 2px
+					margin-bottom: 20px
+				& span:last-child
+					font-size: 25px
+					color: white
+	&--aboutUs
+	.aboutUs
+		&--wrapper
+			display: flex
+			align-items: center
+		&__img
+			margin-right: 30px
+			flex: 1 0 auto
+			& img
+				width: 100%
+
+@media (max-width: 1205px)
+	.section--hero
+		height: auto
+	.section--hero--moto
+		flex-direction: column
+		align-items: center
+		padding-top: 165px
+		padding-bottom: 30px
+	.section--hero--moto .hero__rabbit
+		position: relative
+		width: 100%
+	.section--hero--moto .moto
+		align-self: center
+	.aboutUs--wrapper
+		flex-direction: column
+	.section .aboutUs__img
+		margin-right: 0
+		margin-bottom: 3em
+	.section .aboutUs__text
+		padding-x 20px
+	.section--double.tech
+		flex-direction: column
 
 @media (max-width: 800px)
 	.section--double
 		flex-flow: column nowrap
 	.section--right
 		padding-left: 0
+	.section--hero
+		display: none
+	.section .about-us__text
+		padding-x 0
+	.section--profit
+		background-image: none
+		background-color: grey_brand

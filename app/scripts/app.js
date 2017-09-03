@@ -16,9 +16,11 @@ $(() => {
 		}
 	);
 
+	// Masked phone input
 	$('input[type="tel"]').mask('+7 (000) 000-00-00');
 
-	ymaps.load()
+	// Load Yandex.Map
+	ymaps.load('https://api-maps.yandex.ru/2.1/?lang=ru_RU')
 		.then(maps => {
 			/**
 			 * Создаем мультимаршрут.
@@ -44,7 +46,7 @@ $(() => {
 			});
 
 			// Создаем карту с добавленными на нее кнопками.
-			const myMap = new maps.Map('contactsYmap', {
+			const myMap = new maps.Map('ymap', {
 				center: [55.750625, 37.626],
 				zoom: 7,
 				controls: [],

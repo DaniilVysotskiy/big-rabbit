@@ -1,0 +1,42 @@
+.photo
+	display block
+	&--techWrapper
+		display: flex
+		flex-flow: row wrap
+		justify-content flex-end
+		margin: -15px
+		& .photo__item
+			width: calc(50% - 30px)
+			flex-basis: 270px
+			margin: 15px
+			overflow hidden
+			& img
+				height: 100%
+	&--gallery
+		display: flex
+		flex-flow: row wrap
+		justify-content space-around
+		margin: -15px
+		& .photo__item
+			position: relative
+			width: calc(25% - 30px)
+			min-width: 270px
+			min-height: 270px
+			flex-basis: 270px
+			background-color: green_brand_light
+			margin: 15px
+			overflow hidden
+			& img
+				height: 100%
+@media (max-width: 1205px)
+	.photo--techWrapper
+		justify-content space-around
+@media (max-width: 800px)
+	// .photo--techWrapper,
+	// .photo--gallery
+	// 	justify-content space-around
+	// 	width: 100%
+	// 	margin: 0
+	// .photo--techWrapper .photo__item,
+	// .photo--gallery .photo__item
+	// 	margin: 15px 0
