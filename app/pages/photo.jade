@@ -1,0 +1,33 @@
+extends /blocks/layout-default/layout-default
+include ../blocks/breadcrumbs/breadcrumbs
+include ../blocks/section/section
+
+block head
+	- var pageTitle = 'Фотогалерея | Юхнов-Крол';
+
+block content
+	+breadcrumbs(['Главная', 'О ферме', 'Фотогалерея'])
+	+section.section--pb50px
+		.container
+			nav.tabs
+				a.tabs__tab(href="#about") О ферме
+				a.tabs__tab.active(href="#photo") Фотогалерея
+				a.tabs__tab(href="#sertificate") Сертификаты
+			.content
+				.photo--gallery
+					a.photo__item(href="#0")
+						img(src="/assets/images/main/photo1.jpg", alt="")
+					a.photo__item(href="#0")
+						img(src="/assets/images/main/photo2.jpg", alt="")
+					a.photo__item(href="#0")
+						img(src="/assets/images/main/photo3.jpg", alt="")
+					a.photo__item(href="#0")
+						img(src="/assets/images/main/photo4.jpg", alt="")
+					a.photo__item(href="#0")
+						img(src="/assets/images/main/photo5.jpg", alt="")
+					a.photo__item(href="#0")
+						img(src="/assets/images/main/photo6.jpg", alt="")
+					a.photo__item(href="#0")
+						img(src="/assets/images/main/photo7.jpg", alt="")
+					.photo__item
+						a.more-link(href="/products.html") Еще

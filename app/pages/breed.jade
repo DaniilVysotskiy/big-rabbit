@@ -1,0 +1,33 @@
+extends /blocks/layout-default/layout-default
+include ../blocks/breadcrumbs/breadcrumbs
+include ../blocks/section/section
+
+block head
+	- var pageTitle = 'Племенное поголовье | Юхнов-Крол';
+
+block content
+	+breadcrumbs(['Главная', 'Племенное поголовье'])
+	+section.section--pb50px
+		.container
+			p Основное направление нашей деятельности ‒ продажа полезного мяса кроликов высокого качества, а также выращивание чистопородных кроликов.
+			p На нашей кролиководческой ферме разводятся племянные породы кроликов, среди которых:французский Хиплус, Калифорнийские кролики, Советская шиншила и др.
+			p Вы можете купить у нас чистопородных крольчат для разведения, а также мясо кроликов. Цена и условия продажи зависит от количества и расстояния до места доставки.
+
+			h2.title.title--mt30px Наши породы
+			.breed--wrapper
+				a.breed__item(href="#california")
+					.breed__img
+						.breed__bg
+						img.california(src="/assets/images/main/california_breed.png", alt="Калифорнийский кролик")
+					.breed__text Калифорнийский<br>кролик
+				a.breed__item(href="#shinshila")
+					.breed__img
+						.breed__bg
+						img.shinshila(src="/assets/images/main/shinshila_breed.png", alt="Советская шиншила")
+					.breed__text Советская<br>шиншила
+				a.breed__item(href="#hyplus")
+					.breed__img
+						.breed__bg
+						img.hyplus(src="/assets/images/main/hyplus_breed.png", alt="Французский Хиплюс")
+					.breed__text Французский<br>Хиплюс
+
