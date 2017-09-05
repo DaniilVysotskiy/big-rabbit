@@ -1,0 +1,92 @@
+.cycle
+	display flex
+	flex-direction: column
+	position: relative
+	&::before
+		content: ''
+		display: block
+		height: calc(100% - 250px)
+		top: 50%
+		left: calc(70px/2 - 1px)
+		transform: translateY(-50%)
+		border-left: 2px solid grey_brand 
+		position: absolute
+		z-index: -1
+	&__item
+		display: flex
+		flex-flow: row nowrap
+		align-items: center
+		&:not(:first-child)
+			margin-top: 50px
+	&__icon
+		flex: 0 0 70px
+		width: 70px
+		height: 70px
+		border-radius: 50%
+		background-color: grey_brand
+		margin-right: 30px
+		&::after
+			content: ''
+			display: block
+			position: relative
+			top: 50%
+			left: 50%
+			transform: translate(-50%, -50%)
+		&.barn::after
+			sprite: $barn
+		&.lab::after
+			sprite: $lab
+		&.rabbit::after
+			sprite: $rabbit_white
+		&.cleaver::after
+			sprite: $cleaver
+		&.leg::after
+			sprite: $leg
+		&.wheat::after
+			sprite: $wheat_white
+		&.car::after
+			sprite: $car
+	&__img
+		flex: 0 0 270px
+		width: 270px
+		margin-right: 30px
+		& img
+			width: 100%
+	&__text
+		position: relative
+		padding-left: 30px
+		border-left: 2px solid green_brand_light
+		&::before
+			content: ''
+			position: absolute
+			display: block
+			top: 50%
+			left: -4px
+			width: 15px
+			height: 15px
+			background-color: white
+			border-left: 2px solid green_brand_light
+			border-top: 2px solid green_brand_light
+			transform: rotate(-45deg) translateY(-50%)
+
+@media (max-width: 800px)
+	.cycle::before
+		content: none
+	.cycle__item
+		position: relative
+		flex-direction: column
+		align-items: flex-start
+	.cycle__icon
+		position: absolute
+		top: 10px
+		left: 10px
+		margin-bottom: 30px
+	.cycle__img
+		flex: 0 0 auto
+		margin-right: 0
+		margin-bottom: 30px
+	.cycle__text
+		padding-left: 0
+		border-left: 0
+		&::before
+			content: none

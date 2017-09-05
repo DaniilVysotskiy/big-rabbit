@@ -1,0 +1,26 @@
+.tabs
+	display flex
+	flex-flow: row wrap
+	border-bottom: 2px solid green_brand_light
+	&__tab
+		display: flex
+		justify-content center
+		align-items: center
+		width: 215px
+		height: 60px
+		vertical-align: middle
+		text-align: center
+		background-color: grey_brand_light
+		color: grey_brand
+		font-size: 20px
+		font-weight: 500
+		text-decoration: none
+		border-top-left-radius: 3px
+		border-top-right-radius: 3px
+		&:hover,
+		&.active
+			background-color: green_brand_light
+			color: white
+		&:not(:first-child)
+			margin-left: 25px
+
