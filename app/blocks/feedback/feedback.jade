@@ -1,13 +1,13 @@
-mixin feedback()
+mixin feedback(id)
 	+b.feedback&attributes(attributes)
-		form.feedback__form.form(action="handleForm.php")
+		form.feedback__form.form(action="https://formspree.io/info@big-rabbit.ru" name=id method="POST")
 			span.form__text Если у вас есть вопросы, оставьте заявку и мы свяжемся с вами в ближайшее время.
 			small.form__small * Все поля формы являются обязательными.
-			input.form__input(type="text" name="name" required placeholder="Имя")
-			input.form__input(type="tel" name="tel" required placeholder="Телефон")
-			input.form__input(type="email" name="email" required placeholder="E-mail")
-			textarea.form__textarea(type="text" name="name" rows="5" required placeholder="Ваш вопрос")
-			input.form__agree(type="checkbox" id="agree-term" hidden required)
-			label.form__checkbox(for="agree-term") Я согласен на обработку персональных данных
+			input.form__input(type="text" name=id+"-name" required placeholder="Имя")
+			input.form__input(type="tel" name=id+"-tel" required placeholder="Телефон")
+			input.form__input(type="email" name=id+"-email" required placeholder="E-mail")
+			textarea.form__textarea(type="text" name=id+"-name" rows="5" required placeholder="Ваш вопрос")
+			input.form__agree(type="checkbox" id=id+"-agree-term" hidden required)
+			label.form__checkbox(for=id+"-agree-term") Я согласен на обработку персональных данных
 			button.btn(type="submit") Отправить
 

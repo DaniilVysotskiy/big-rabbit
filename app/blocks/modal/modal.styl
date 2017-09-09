@@ -28,6 +28,13 @@
 			background-color: transparent
 			border: none
 			sprite: $close
+	&--breed
+		display: flex
+		visibility: hidden
+		&.active
+			visibility: visible
+		& .modal__dialog
+			max-height: calc(100vh - 50px);
 	&__header
 		padding: 25px
 	&__scroll

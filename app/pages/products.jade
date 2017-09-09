@@ -6,54 +6,54 @@ block head
 	- var pageTitle = 'Мясо кролика | Юхнов-Крол';
 
 block content
-	+breadcrumbs(['Главная', 'Мясо кролика', 'Продукция'])
+	+breadcrumbs([['Главная', '/'], ['Мясо кролика', '/products.html'], ['Продукция', '/products.html']])
 	+section.section--pb50px
 		.container
 			nav.tabs
-				a.tabs__tab.active(href="#products") Продукция
+				a.tabs__tab.active(href="/products.html") Продукция
 				//- a.tabs__tab(href="#photo") Где купить мясо кролика
-				a.tabs__tab(href="#pros") О пользе мяса кролика
+				a.tabs__tab(href="/pros.html") О пользе мяса кролика
 				//- a.tabs__tab(href="#reciepts") Рецепты
 			.content
 				.product__list
 					.product__item
 						.product__img
-							img(src="https://via.placeholder.com/370x285", alt="")
+							img(src="/assets/images/products/tushka.jpg", alt="Тушка кролика охлажденная")
 						.product__desc
 							h2.title.title--uppercase.title--white Тушка кролика охлажденная
 					.product__item
 						.product__img
-							img(src="https://via.placeholder.com/370x285", alt="")
+							img(src="/assets/images/products/okorochka.jpg", alt="Окорочка кролика охлажденные")
 						.product__desc
 							h2.title.title--uppercase.title--white Окорочка кролика охлажденные 
 					.product__item
 						.product__img
-							img(src="https://via.placeholder.com/370x285", alt="")
+							img(src="/assets/images/products/lopatka.jpg", alt="Лопатка кролика охлажденная")
 						.product__desc
 							h2.title.title--uppercase.title--white Лопатка кролика охлажденная
 					.product__item
 						.product__img
-							img(src="https://via.placeholder.com/370x285", alt="")
+							img(src="/assets/images/products/spinka.jpg", alt="Спинка кролика охлажденная")
 						.product__desc
 							h2.title.title--uppercase.title--white Спинка кролика охлажденная
 					.product__item
 						.product__img
-							img(src="https://via.placeholder.com/370x285", alt="")
+							img(src="/assets/images/products/file.jpg", alt="Филе кролика охлажденное")
 						.product__desc
 							h2.title.title--uppercase.title--white Филе кролика охлажденное
 					.product__item
 						.product__img
-							img(src="https://via.placeholder.com/370x285", alt="")
+							img(src="/assets/images/products/ragu.jpg", alt="Рагу из кролика охлажденное")
 						.product__desc
 							h2.title.title--uppercase.title--white Рагу из кролика охлажденное
 					.product__item
 						.product__img
-							img(src="https://via.placeholder.com/370x285", alt="")
+							img(src="/assets/images/products/ruletiki.jpg", alt="Рулетики деликатесные из брюшка кролика")
 						.product__desc
 							h2.title.title--uppercase.title--white Рулетики деликатесные из брюшка кролика
 					.product__item
 						.product__img
-							img(src="https://via.placeholder.com/370x285", alt="")
+							img(src="/assets/images/products/pechen.jpg", alt="Печень кролика")
 						.product__desc
 							h2.title.title--uppercase.title--white Печень кролика
 					

@@ -8,7 +8,7 @@ block head
 	- var pageTitle = 'Контакты | Юхнов-Крол';
 
 block content
-	+breadcrumbs(['Главная', 'Контакты'])
+	+breadcrumbs([['Главная', '/'], ['Контакты', '/contacts.html']])
 	+section
 		.container
 			.section--double
@@ -30,10 +30,10 @@ block content
 						.contacts__group.site
 							strong Сайт:
 							a(href="/") big-rabbit.ru
-						.contacts__group
-							a.print(href="#0") Печать
+						//- .contacts__group
+						//- 	a.print(href="#0") Печать
 				.section--right
 					h2.title Обратная связь
-					+feedback
+					+feedback('contacts')
 	+section.section--map
 		#ymap.contacts__map

@@ -7,47 +7,49 @@ mixin header()
 			.header--wrapper
 				+logo
 				.header__menu
-					a.grey-link(href="/wheretobuy.html") Где купить мясо кролика?
+					//- a.grey-link(href="/wheretobuy.html") Где купить мясо кролика?
 					a.phone-link(href="tel: 8 (800) 707-59-00") 8 (800) 707-59-00
+					a.phone-link(href="tel: +7 (985) 970-40-98") +7 (985) 970-40-98
+					a.phone-link(href="tel: +7 (926) 539-37-69") +7 (926) 539-37-69
 					.icons_group
-						a.icon-help(href="#feedback" data-link="modal")
+						a.icon-feedback(href="#feedback" data-link="modal")
 						a.icon-phone(href="/contacts.html")
-						a.icon-search(href="/search.html")
+						//- a.icon-search(href="/search.html")
 					nav.nav
 						ul.nav__list
-							li.nav__item.active
+							li.nav__item
 								a.nav__link(href="/") Главная
 							li.nav__item.hasDropdown
 								a.nav__link(href="/about.html") О ферме
 								ul.dropdown
 									.dropdown--wrapper
 										li.dropdown__item
-											a.dropdown__link(href="#0") Производство
+											a.dropdown__link(href="/about.html") Производство
 										li.dropdown__item
-											a.dropdown__link(href="#0") Фотогалерея
-										li.dropdown__item
-											a.dropdown__link(href="#0") Сертификаты
+											a.dropdown__link(href="/photo.html") Фотогалерея
+										//- li.dropdown__item
+										//- 	a.dropdown__link(href="#0") Сертификаты
 							li.nav__item.hasDropdown
 								a.nav__link(href="/products.html") Мясо кролика
 								ul.dropdown
 									.dropdown--wrapper
 										li.dropdown__item
-											a.dropdown__link(href="#0") Продукция
+											a.dropdown__link(href="/products.html") Продукция
+										//- li.dropdown__item
+										//- 	a.dropdown__link(href="#0") Где купить мясо кролика
 										li.dropdown__item
-											a.dropdown__link(href="#0") Где купить мясо кролика
-										li.dropdown__item
-											a.dropdown__link(href="#0") О пользе мяса кролика
-										li.dropdown__item
-											a.dropdown__link(href="#0") Рецепты
+											a.dropdown__link(href="/pros.html") О пользе мяса кролика
+										//- li.dropdown__item
+										//- 	a.dropdown__link(href="#0") Рецепты
 							li.nav__item.hasDropdown
 								a.nav__link(href="/breed.html") Племенное поголовье
 								ul.dropdown
 									.dropdown--wrapper
 										li.dropdown__item
-											a.dropdown__link(href="#0") Порода Хиплюс
+											a.dropdown__link(href="/breed.html#hyplus") Порода Хиплюс
 										li.dropdown__item
-											a.dropdown__link(href="#0") Порода Калифорнийская
+											a.dropdown__link(href="/breed.html#shinshila") Порода Советская шиншила
 										li.dropdown__item
-											a.dropdown__link(href="#0") Порода Советская шиншила
+											a.dropdown__link(href="/breed.html#california") Порода Калифорнийская
 							li.nav__item
 								a.nav__link(href="/contacts.html") Контакты

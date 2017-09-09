@@ -58,26 +58,26 @@ block content
 			h2.title Продукция
 			.product--wrapper
 				.product__item
-					a.product__name(href="#0") Филе кролика
-					img(src="/assets/images/main/product1.jpg", alt="Филе кролика")
+					a.product__name(href="/products.html") Филе кролика
+					img(src="/assets/images/products/file.jpg", alt="Филе кролика")
 				.product__item
-					a.product__name(href="#0") Тушка кролика
-					img(src="/assets/images/main/product2.jpg", alt="Тушка кролика")
+					a.product__name(href="/products.html") Тушка кролика
+					img(src="/assets/images/products/tushka.jpg", alt="Тушка кролика")
 				.product__item
-					a.product__name(href="#0") Печень кролика
-					img(src="/assets/images/main/product3.jpg", alt="Печень кролика")
+					a.product__name(href="/products.html") Печень кролика
+					img(src="/assets/images/products/pechen.jpg", alt="Печень кролика")
 				.product__item
-					a.product__name(href="#0") Филе кролика
-					img(src="/assets/images/main/product4.jpg", alt="Филе кролика")
+					a.product__name(href="/products.html") Окорочка кролика
+					img(src="/assets/images/products/okorochka.jpg", alt="Окорочка кролика")
 				.product__item
-					a.product__name(href="#0") Голень кролика
-					img(src="/assets/images/main/product5.jpg", alt="Голень кролика")
+					a.product__name(href="/products.html") Рулетики кролика
+					img(src="/assets/images/products/ruletiki.jpg", alt="Рулетики из  кролика")
 				.product__item
-					a.product__name(href="#0") Спинка кролика
-					img(src="/assets/images/main/product6.jpg", alt="Спинка кролика")
+					a.product__name(href="/products.html") Спинка кролика
+					img(src="/assets/images/products/spinka.jpg", alt="Спинка кролика")
 				.product__item
-					a.product__name(href="#0") Спинка кролика
-					img(src="/assets/images/main/product6.jpg", alt="Спинка кролика")
+					a.product__name(href="/products.html") Лопатка кролика
+					img(src="/assets/images/products/lopatka.jpg", alt="Лопатка кролика")
 				.product__item
 					a.more-link(href="/products.html") Еще
 	.section.section--profit.section--default
@@ -104,7 +104,7 @@ block content
 					.facts__item
 						.facts__icon.ham
 						span.facts__number 60%
-						span.facts__text Выход мяса породы Хиплус
+						span.facts__text Выход мяса породы Хиплюс
 					.facts__item
 						.facts__icon.rabbit
 						span.facts__number 500
@@ -123,37 +123,37 @@ block content
 		.container
 			h2.title Фотогалерея
 			.photo--gallery
-				a.photo__item(href="#0")
+				a.photo__item(href="/photo.html")
 					img(src="/assets/images/main/photo1.jpg", alt="")
-				a.photo__item(href="#0")
+				a.photo__item(href="/photo.html")
 					img(src="/assets/images/main/photo2.jpg", alt="")
-				a.photo__item(href="#0")
+				a.photo__item(href="/photo.html")
 					img(src="/assets/images/main/photo3.jpg", alt="")
-				a.photo__item(href="#0")
+				a.photo__item(href="/photo.html")
 					img(src="/assets/images/main/photo4.jpg", alt="")
-				a.photo__item(href="#0")
+				a.photo__item(href="/photo.html")
 					img(src="/assets/images/main/photo5.jpg", alt="")
-				a.photo__item(href="#0")
+				a.photo__item(href="/photo.html")
 					img(src="/assets/images/main/photo6.jpg", alt="")
-				a.photo__item(href="#0")
+				a.photo__item(href="/photo.html")
 					img(src="/assets/images/main/photo7.jpg", alt="")
 				.photo__item
-					a.more-link(href="/products.html") Еще
+					a.more-link(href="/photo.html") Еще
 	.section.section--default
 		.container
 			h2.title Кролики
 			.breed--wrapper
-				a.breed__item(href="#0")
+				a.breed__item(href="/breed.html#california")
 					.breed__img
 						.breed__bg
 						img.california(src="/assets/images/main/california_breed.png", alt="Калифорнийский кролик")
 					.breed__text Калифорнийский<br>кролик
-				a.breed__item(href="#0")
+				a.breed__item(href="/breed.html#shinshila")
 					.breed__img
 						.breed__bg
 						img.shinshila(src="/assets/images/main/shinshila_breed.png", alt="Советская шиншила")
 					.breed__text Советская<br>шиншила
-				a.breed__item(href="#0")
+				a.breed__item(href="/breed.html#hyplus")
 					.breed__img
 						.breed__bg
 						img.hyplus(src="/assets/images/main/hyplus_breed.png", alt="Французский Хиплюс")
@@ -161,4 +161,4 @@ block content
 	.section.section--map
 		#ymap.contacts__map
 		.container.absolute
-			+feedback.mainPage
+			+feedback('main').mainPage

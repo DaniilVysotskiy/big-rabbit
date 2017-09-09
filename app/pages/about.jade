@@ -6,13 +6,13 @@ block head
 	- var pageTitle = 'О ферме | Юхнов-Крол';
 
 block content
-	+breadcrumbs(['Главная', 'О ферме'])
+	+breadcrumbs([['Главная', '/'], ['О ферме', '/about.html'], ['Производство', '/about.html']])
 	+section.section--pb50px
 		.container
 			nav.tabs
-				a.tabs__tab.active(href="#about") О ферме
-				a.tabs__tab(href="#photo") Фотогалерея
-				a.tabs__tab(href="#sertificate") Сертификаты
+				a.tabs__tab.active(href="/about.html") О ферме
+				a.tabs__tab(href="/photo.html") Фотогалерея
+				//- a.tabs__tab(href="#sertificate") Сертификаты
 			.content
 				p «Юхнов-Крол» – высокотехнологичный агропромышленный комплекс полного цикла, в работе которого задействованы европейские высокие технологии и итальянское оборудование для промышленного кролиководства производителя Meneghin – лидера в сфере проектирования и строительства автоматизированных систем для кроликоферм.
 				span.title.title--uppercase Производственный цикл нашего предприятия включает следующие компоненты:
