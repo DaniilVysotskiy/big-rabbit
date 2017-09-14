@@ -34,6 +34,7 @@
 		&.active
 			visibility: visible
 		& .modal__dialog
+			max-width: 600px
 			max-height: calc(100vh - 50px);
 	&__header
 		padding: 25px
@@ -92,3 +93,7 @@
 	background-color: grey_brand_light
 	&::after
 		filter: invert(.4)
+@media (max-width: 600px)
+	.modal__dialog
+		width: 100vw
+		height: 100vh
