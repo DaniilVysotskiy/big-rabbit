@@ -1,57 +1,102 @@
 .product
 	display block
+	&__list
+		display: flex
+		flex-flow: row wrap
+		justify-content space-around
+		align-items: stretch
+		margin: -15px
+		& .product__item
+			display: flex
+			flex-direction: column
+			width: calc(33.33% - 30px)
+			min-width: 370px
+			margin: 15px
+		& .product__img
+			display: flex
+			max-height: 285px
+			& img
+				flex: 1 1 auto
+				width: 100%
+		& .product__desc
+			flex: 1 1 auto
+			position: relative
+			padding: 25px
+			background-color: green_brand_light
+			& .title
+				text-align: center
+			&::before
+				content: ''
+				display: block
+				position: absolute
+				width: 20px
+				height: 20px
+				background-color: green_brand_light
+				top: -10px
+				left: 50%
+				transform: translateX(-50%) rotate(45deg)
 	&--wrapper
 		display: flex
 		flex-flow: row wrap
 		justify-content space-around
 		align-items: stretch
 		margin: -15px
-	&__item
-		position: relative
-		width: calc(25% - 30px)
-		min-width: 270px
-		min-height: 270px
-		flex-basis: 270px
-		background-color: green_brand_light
-		margin: 15px
-		overflow hidden
-		& img
-			height: 100%
-	&__name
-		display: flex
-		align-items: center
-		justify-content center
-		position: absolute
-		width: 100%
-		height: 90px
-		top: 50%
-		transform: translate(0, -50%)
-		font-size: 22px
-		font-weight: 500
-		white-space: nowrap
-		color: black_brand
-		text-decoration: none
-		&::before
-			content: ''
-			display: block
+		& .product__item
+			position: relative
+			width: calc(25% - 30px)
+			min-width: 270px
+			max-height: 270px
+			flex-basis: 270px
+			background-color: transparent
+			margin: 15px
+			overflow hidden
+			& img
+				flex: 1 1 auto
+				width: 100%
+		& .product__name
+			display: flex
+			align-items: center
+			justify-content center
+			position: absolute
 			width: 100%
-			height: 100%
-			position: absolute
-			background-color: rgba(255, 255, 255, .5)
-			z-index: -2
-		&::after
-			content: ''
-			display: block
-			width: 31px
-			height: 7px
-			background-color: green_brand_light
-			position: absolute
-			left: 0
-			top: calc(50% - 3px)
-			z-index: -1
-		&:hover
-			height: 100%
-@media (max-width: 800px)
+			height: 90px
+			top: 50%
+			transform: translate(0, -50%)
+			font-size: 22px
+			font-weight: 500
+			white-space: nowrap
+			color: black_brand
+			text-decoration: none
+			&::before
+				content: ''
+				display: block
+				width: 100%
+				height: 100%
+				position: absolute
+				background-color: rgba(255, 255, 255, .5)
+				z-index: -2
+			&::after
+				content: ''
+				display: block
+				width: 31px
+				height: 7px
+				background-color: green_brand_light
+				position: absolute
+				left: 0
+				top: calc(50% - 3px)
+				z-index: -1
+			&:hover
+				height: 100%
+@media (max-width: 600px)
+	.product__list
+		flex-direction: column
+		width: 100%
+		& .product__item
+			width: auto
+			min-width: 300px
+			& img
+				height: 100%
+
 	// .product--wrapper
 	// 	justify-content space-around
 	// 	margin: -10px

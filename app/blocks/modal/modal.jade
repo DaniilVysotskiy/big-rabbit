@@ -1,0 +1,9 @@
+include ../feedback/feedback
+
+mixin modal()
+	+b.modal&attributes(attributes)
+		#feedback.modal--wrapper
+			.modal__dialog
+				button.close
+				.modal__body
+					+feedback('modal')
