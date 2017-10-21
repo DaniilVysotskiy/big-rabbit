@@ -30,6 +30,7 @@
 	&--hero
 		height: 700px
 		position: relative
+		background-color: grey_brand
 		&--bg
 			display: block
 			position: absolute
@@ -38,8 +39,7 @@
 			background-image: url('/assets/images/header_bg.jpg')
 			background-size: cover
 			background-position: 100% 45%
-			filter: brightness(.8) saturate(1.5)
-			z-index: -1
+			filter: brightness(.5) saturate(1.5)
 		&--moto
 			flex: 1 1 auto
 			display: flex
@@ -56,6 +56,7 @@
 				display flex
 				flex-direction: column
 				max-width: 570px
+				text-shadow: 1px 1px 5px black
 				z-index: 1
 				& span:first-child
 					font-size: 46px
