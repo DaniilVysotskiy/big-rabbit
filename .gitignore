@@ -29,6 +29,7 @@ dist
 .settings
 .tmproj
 Thumbs.db
+package-lock.json
 
 # Folders to ignore
 .CVS
